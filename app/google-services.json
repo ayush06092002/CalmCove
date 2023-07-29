@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "981006022278",
+    "project_id": "calmcove-37dda",
+    "storage_bucket": "calmcove-37dda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981006022278:android:d0933f1b99bb426207c307",
+        "android_client_info": {
+          "package_name": "com.who.calmcove"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981006022278-bla6s38od5savcjrf1sgsi0d7sc0tm8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.who.calmcove",
+            "certificate_hash": "f84b80c93c1cc342c7d0526c4e02772a5b0b5640"
+          }
+        },
+        {
+          "client_id": "981006022278-2l5lht63515hl3as270uvn63elbrvq7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlpqf2hrXSNRmRBQTeHQ_lxR4dsJD-iD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981006022278-2l5lht63515hl3as270uvn63elbrvq7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
