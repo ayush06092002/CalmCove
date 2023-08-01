@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_category_selection.xml -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f2f2f2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/categ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NULL"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxAnxiety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anxiety"
+        android:textSize="18sp"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/categ"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxDepression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Depression"
+        android:textSize="18sp"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/checkBoxAnxiety"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxStress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stress"
+        android:textSize="18sp"
+        android:layout_marginStart="32dp"
+        android:layout_below="@id/checkBoxDepression"/>
+
+    <Button
+        android:id="@+id/buttonSubmitCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_bg"
+        android:elevation="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/checkBoxStress"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

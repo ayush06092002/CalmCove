@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     showToast("Log in successful!")
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, category_selection::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
                     setLoginState(true)
