@@ -1,0 +1,58 @@
+<!-- activity_login.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F2F2F2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:paddingBottom="20dp"
+        android:textSize="30dp"
+        android:id="@+id/loginnn"/>
+    <EditText
+        android:id="@+id/editTextEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@id/loginnn"
+        android:paddingLeft="5dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/editTextPasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmailLogin"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="5dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPasswordLogin"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_bg"
+        android:text="Log In" />
+
+    <Button
+        android:id="@+id/buttonSignUpLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLogin"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_bg"
+        android:text="Sign Up" />
+
+</RelativeLayout>

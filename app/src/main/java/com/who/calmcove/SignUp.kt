@@ -65,17 +65,15 @@ class SignUp : AppCompatActivity() {
                 showToast("Passwords do not match.")
             } else {
                 // Save user data to Firebase Database
-                val user = signUpWithEmailAndPassword(name, email, password, dob, mobileNumber)
-                userReference.push().setValue(user)
+                signUpWithEmailAndPassword(name, email, password, dob, mobileNumber)
 
-                showToast("Sign-up successful!") // You can also redirect to a new activity or perform other actions.
             }
         }
 
     }
 
     @SuppressLint("RestrictedApi")
-    private fun signUpWithEmailAndPassword(email: String, password: String, name: String, dob: String, mobileNumber: String) {
+    private fun signUpWithEmailAndPassword(name: String, email: String, password: String, dob: String, mobileNumber: String) {
         // Create user with email and password using Firebase Authentication
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
