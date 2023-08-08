@@ -61,5 +61,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:ktx'
 
     implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
 
 }

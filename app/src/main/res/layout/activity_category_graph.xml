@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- BarChart view -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Custom legend layout -->
+    <LinearLayout
+        android:id="@+id/firstl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idBarChart"
+        tools:ignore="MissingConstraints">
+
+        <!-- Small rectangle -->
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#FF4CAF50" />
+
+        <!-- Text label -->
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Anxiety"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/firstl"
+        tools:ignore="MissingConstraints">
+
+        <!-- Small rectangle -->
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#FFFFEB3B" />
+
+        <!-- Text label -->
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Depression"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/secondl"
+        tools:ignore="MissingConstraints">
+
+        <!-- Small rectangle -->
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#FFF44336" />
+
+        <!-- Text label -->
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Stress"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -105,6 +105,11 @@ class MainActivity : AppCompatActivity() {
             setLoginState(false)
             startActivity(intent)
         }
+        binding.graph.setOnClickListener{
+            intent = Intent(this, category_graph::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun setLoginState(isLoggedIn: Boolean) {
