@@ -16,6 +16,9 @@
         android:theme="@style/Theme.CalmCove"
         tools:targetApi="31">
         <activity
+            android:name=".GuidedBreathingActivity"
+            android:exported="false" />
+        <activity
             android:name=".category_graph"
             android:exported="false" />
         <activity

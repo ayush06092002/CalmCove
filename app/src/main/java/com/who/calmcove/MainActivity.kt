@@ -6,9 +6,14 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.preference.PreferenceManager
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -36,6 +41,56 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        val imgMenu = findViewById<ImageView>(R.id.imgMenu)
+
+        val navView = findViewById<NavigationView>(R.id.navDrawer)
+        val navText = navView.getHeaderView(0).findViewById<TextView>(R.id.navTextName)
+        navView.itemIconTintList = null
+        imgMenu.setOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menu_home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.menu_breathing -> {
+                    intent = Intent(this, GuidedBreathingActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.menu_journaling -> {
+                    // Handle Journaling item click
+                    // Open the Journaling activity here
+                    true
+                }
+                R.id.menu_graph -> {
+                    // Handle Graph item click
+                    val intent = Intent(this, category_graph::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.menu_signout -> {
+                    intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    auth.signOut()
+                    sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+                    setLoginState(false)
+                    startActivity(intent)
+                    true
+                }
+                R.id.menu_notifications -> {
+                    // Handle Notifications item click
+                    // You can open the Notifications activity here
+                    true
+                }
+                else -> false
+            }
+        }
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         val isLoggedIn = sharedPreferences.getBoolean("login_state", false)
         if (!isLoggedIn) {
@@ -58,6 +113,7 @@ class MainActivity : AppCompatActivity() {
                         // Retrieve the "name" value from the snapshot
                         val namee = dataSnapshot.child("name").value.toString()
                         binding.editTextName.setText(namee)
+                        navText.text = namee
                     } else {
                         showToast("Failed to get user Name")
                     }
